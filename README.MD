@@ -1,14 +1,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Noticiei</h3>
+  <h3 align="center">Noticiei (Backend)</h3>
 </div>
 
 
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
 
-Desenvolvida para cumprir o MVP1 da pós de Engenharia de Software na PUCRJ no ano de 2023. Essa plataforma tem como objetivo, levar as noticias de uma forma fácil, simples e direta paras os usuários.
+Uma plataforma que tem como objetivo, levar as noticias de uma forma fácil, simples e direta paras seus usuários.
 
 ### Tecnologias utilizadas
 
@@ -26,7 +26,12 @@ Desenvolvida para cumprir o MVP1 da pós de Engenharia de Software na PUCRJ no a
    ```sh
    git clone https://github.com/plscabral/MVP1-Noticiei-Back.git
    ```
-2.
+2. Criar arquivo .env e preencher conforme o exemplo:
+   ```sh
+   SECRET_KEY=0fcb89b2a2d0e096a566e836eb3644ea
+   ALGORITHM=HS256
+   EXPIRES_IN_MIN=3000
+   ```
 
 ### Execução
 
