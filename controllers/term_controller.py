@@ -10,7 +10,9 @@ router = APIRouter(prefix='/terms', tags=["Termos"])
 def get_terms(user: UserResModel = Depends(auth.get_user_logged)):
     session = Session()
     user_terms: list[UserTerm] = session.query(UserTerm).filter(UserTerm.user_id == user.id).all()
-    return [user.term for user in user_terms]
+    users = [user.term for user in user_terms]
+    session.close()
+    return users
 
 
 @router.delete("/{id}")
@@ -22,6 +24,7 @@ def delete_term_by_id(id: int, user: UserResModel = Depends(auth.get_user_logged
     session.commit()
     session.delete(term)
     session.commit()
+    session.close()
     return {"success": True, "message": "Termo deletado com sucesso!"}
 
 
@@ -42,6 +45,7 @@ def create_term(model: TermReqModel, user: UserResModel = Depends(auth.get_user_
         session.add(user_term)
         session.commit()
 
+    session.close()
     return {"success": True, "message": "Termo criado com sucesso!"}
 
 

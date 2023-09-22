@@ -11,6 +11,7 @@ def create_user(model: UserReqModel):
     session = Session()
     session.add(user)
     session.commit()
+    session.close()
     return {"success": True, "message": "Usuário criado com sucesso!"}
 
 

@@ -20,6 +20,8 @@ def authenticate(model: AuthReqModel):
 
     token = jwt.create_access_token({'sub': model.email})
 
+    session.close()
+
     return {
         "success": True,
         "message": "Usuário autenticado com sucesso!",
