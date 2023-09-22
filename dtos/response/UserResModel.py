@@ -2,6 +2,6 @@ from pydantic import BaseModel
 
 
 class UserResModel(BaseModel):
-    id: str
+    id: int
     name: str
     email: str
