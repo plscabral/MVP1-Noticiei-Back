@@ -32,7 +32,11 @@ Uma plataforma que tem como objetivo, levar as noticias de uma forma fácil, sim
    ALGORITHM=HS256
    EXPIRES_IN_MIN=3000
    ```
-
+3. Rodar o comando abaixo em modo administrador:
+   ```sh
+   pip install -r requirements.txt
+   ```
+   
 ### Execução
 
 1. Rodar o comando abaixo:
